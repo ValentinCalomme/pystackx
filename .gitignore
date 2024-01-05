@@ -1,0 +1,32 @@
+# Ignore everything by default, and then provide exceptions for the files we do want to
+# keep track of. This helps accidentally adding files to source control.
+
+**/*
+
+# Don't ignore directories
+
+!**/
+
+# We never want to ignore .keep files
+!**/.keep
+
+# Root folder files
+
+!/.gitignore
+!/.pre-commit-config.yaml
+!/LICENSE
+!/Makefile
+!/mkdocs.yml
+!/poetry.lock
+!/pyproject.toml
+!/README.md
+!/ruff.toml
+
+# source files
+!/src/**/*.py
+
+# docs
+!/docs/**/*.md
+
+# tests
+!/tests/**/*.py

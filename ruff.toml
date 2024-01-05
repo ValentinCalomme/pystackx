@@ -1,0 +1,18 @@
+# Enable Pyflakes and pycodestyle rules.
+select = [
+    "C90", # https://docs.astral.sh/ruff/rules/#mccabe-c90
+    "E",   # https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
+    "F",   # https://docs.astral.sh/ruff/rules/#pyflakes-f
+    "I",   # https://docs.astral.sh/ruff/rules/#isort-i
+    "W",   # https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
+]
+
+# Ignore `E402` (import violations) in all `__init__.py` files
+[per-file-ignores]
+"__init__.py" = ["E402", "F401"]
+
+[mccabe]
+max-complexity = 5
+
+[pydocstyle]
+convention = "google"
